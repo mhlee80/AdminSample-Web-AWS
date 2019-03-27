@@ -15,9 +15,14 @@
                 <input type="password" id="sign_in_password_input" placeholder="Password" pattern=".*" required>
             </p>
             <p>
-                <input type="submit" value="Sign in">
+                <input type="submit" id="sign_in_submit_input" value="Sign in">
             </p>
         </form>
     </section>
+    <script src="src/vendor/aws-cognito-sdk.min.js"></script>
+    <script src="src/vendor/amazon-cognito-identity.min.js"></script>
+    <script src="src/aws_config.js"></script>
+    <script src="src/cognito_auth.js"></script>
+    <script src="src/sign_in.js"></script>
 </body>
 </html>
