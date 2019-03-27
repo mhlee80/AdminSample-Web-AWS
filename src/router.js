@@ -13,6 +13,10 @@ var router = {};
         window.location.href = "change_password.html";
     };
 
+    router.launchRequiredChangePassword = function() {
+        window.location.href = "required_change_password.html";
+    };
+
     router.launchConsole = function() {
         window.location.href = "console.html";
     };
