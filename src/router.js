@@ -9,7 +9,11 @@ var router = {};
         window.location.href = "sign_in.html";
     };
 
-    router.launchChangePassword = function () {
+    router.launchChangePassword = function() {
         window.location.href = "change_password.html";
+    };
+
+    router.launchConsole = function() {
+        window.location.href = "console.html";
     };
 }());
