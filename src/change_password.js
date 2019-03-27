@@ -1,4 +1,8 @@
 (function scopeWrapper(auth) {
+    auth.hasValidToken(null, function onInvalid() {
+        router.launchSignIn();
+    });
+
     let changePasswordForm = document.getElementById('change_password_form');
     changePasswordForm.addEventListener('submit', changePassword);
 

@@ -1,7 +1,10 @@
-(function scopeWrapper() {
-    let signInButton = document.getElementById('index_sign_in_button');
-    signInButton.addEventListener('click', router.launchSignIn);
+(function scopeWrapper(auth) {
+    auth.hasValidToken(function onValid() {
+        router.launchConsole();
+    });
 
-    let changePasswordButton = document.getElementById('index_change_password_button');
-    changePasswordButton.addEventListener('click', router.launchChangePassword);
-}());
+    let signInButton = document.getElementById('index_sign_in_button');
+    signInButton.addEventListener('click', function(event) {
+        router.launchSignIn();
+    });
+}(cognitoAuth));
