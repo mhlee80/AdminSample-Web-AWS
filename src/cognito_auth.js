@@ -99,6 +99,14 @@ var cognitoAuth = window.cognitoAuth || {};
         }
     });
 
+    cognitoAuth.hasValidToken = function hasValidToken(onValid, onInvalid) {
+        cognitoAuth.authToken.then(function(token) {
+            if (!!token && !!onValid) { onValid(); }
+            if (!token && !!onInvalid) onInvalid();
+        }).catch(function(err) {
+            if (!!onInvalid) onInvalid();
+        });
+    };
 
     /*
      * Cognito User Pool functions

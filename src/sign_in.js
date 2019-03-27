@@ -1,4 +1,8 @@
 (function scopeWrapper(auth) {
+    auth.hasValidToken(function onValid() {
+        router.launchConsole();
+    });
+
     let signInForm = document.getElementById('sign_in_form');
     signInForm.addEventListener('submit', signIn);
 
