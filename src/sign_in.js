@@ -23,7 +23,7 @@
                 alert(codeDeliveryDetails);
             },
             function newPasswordRequired(userAttributes, requiredAttributes) {
-                router.launchChangePassword();
+                router.launchRequiredChangePassword();
             });
     }
 }(cognitoAuth));
