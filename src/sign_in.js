@@ -10,7 +10,7 @@
 
         auth.signIn(email, password,
             function onSuccess() {
-                alert('success');
+                router.launchConsole();
             },
             function onFailure(err) {
                 alert(`failure: ${err}`);
