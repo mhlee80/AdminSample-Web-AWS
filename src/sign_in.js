@@ -8,7 +8,6 @@
         let email = document.getElementById('sign_in_email_input').value;
         let password = document.getElementById('sign_in_password_input').value;
 
-
         auth.signIn(email, password,
             function onSuccess() {
                 alert('success');
@@ -17,10 +16,10 @@
                 alert(`failure: ${err}`);
             },
             function mfaRequired(codeDeliveryDetails) {
-                alert(codeDeliveryDetails)
+                alert(codeDeliveryDetails);
             },
             function newPasswordRequired(userAttributes, requiredAttributes) {
-                window.location.href = "change_password.html";
+                router.launchChangePassword();
             });
     }
 }(cognitoAuth));
