@@ -11,7 +11,7 @@
 
         auth.changePassword(email, originPassword, newPassword,
             function onSuccess() {
-                alert('success');
+                router.launchSignIn();
             },
             function onFailure(err) {
                 alert(`failure: ${err}`);
