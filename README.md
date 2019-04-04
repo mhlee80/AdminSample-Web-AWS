@@ -1,1 +1,1 @@
-# AdminSample-Web-AWS
+# AdminSample-frontend
